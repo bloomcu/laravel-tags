@@ -1,0 +1,20 @@
+{
+    "name": "bloomcu/tags",
+    "description": "An Eloquent tagging package for Laravel",
+    "authors": [
+        {
+            "name": "Ryan Harmon",
+            "email": "ryan@bloomcu.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "BloomCU\\Tags\\": "src"
+        }
+    },
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/database": ">= 8.0",
+        "illuminate/support": ">= 8.0"
+    }
+}
