@@ -7,13 +7,13 @@ abstract class TestCase extends Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         // Pull in our package
-        return [TagsServiceProvider::class]
+        return [TagsServiceProvider::class];
     }
 
     // Before every test run, setup test environment
-    public function setUp()
+    public function setUp(): void
     {
-        parent::setup();
+        parent::setUp();
 
         // Ignore mass assignment exceptions
         Eloquent::unguard();
@@ -26,10 +26,10 @@ abstract class TestCase extends Orchestra\Testbench\TestCase
     }
 
     // After each test is run, teardown the test environment
-    public function tearDown()
+    public function tearDown(): void
     {
         // Drop lessons in database
-        \Scheme::drop('lessons');
+        \Schema::drop('lessons');
     }
 
     protected function getEnvironmentSetup($app)
@@ -38,12 +38,12 @@ abstract class TestCase extends Orchestra\Testbench\TestCase
         $app['config']->set('database.default', 'testbench');
         $app['config']->set('database.connections.testbench', [
             'driver' => 'sqlite',
-            'databse' => ':memory:',
+            'database' => ':memory:',
             'prefix' => ''
         ]);
 
         // Create a lessons migration for testing tags on
-        \Schema::create('lessons', function() {
+        \Schema::create('lessons', function($table) {
             $table->increments('id');
             $table->string('title');
             $table->timestamps();
