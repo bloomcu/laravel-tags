@@ -83,7 +83,7 @@ class TagsCountTest extends TestCase
 
         // Tag lesson with same tag multiple times
         $this->lesson->tag(['red']);
-        $this->lesson->retag(['red', 'white']);
+        $this->lesson->tag(['red']);
 
         // Get tag back from db
         $tag = $tag->fresh();

@@ -30,14 +30,6 @@ trait HasTags
         return $this->syncTags($this->getTagModels($tags));
     }
 
-    // Remove all tags, then add specific tags
-    public function retag(array $tags)
-    {
-        $this->untagAll($this->tags);
-
-        return $this->tag($tags);
-    }
-
     // Remove specific tags
     public function untag(array $tags)
     {
