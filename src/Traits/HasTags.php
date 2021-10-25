@@ -1,14 +1,14 @@
 <?php
 
-namespace BloomCU\Tags\Traits;
+namespace MetriFi\Tags\Traits;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Model;
 
-use BloomCU\Tags\Models\Tag;
-use BloomCU\Tags\Scopes\HasTagScopes;
+use MetriFi\Tags\Models\Tag;
+use MetriFi\Tags\Scopes\HasTagScopes;
 
 trait HasTags
 {

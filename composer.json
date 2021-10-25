@@ -1,5 +1,5 @@
 {
-    "name": "bloomcu/tags",
+    "name": "metrifi/tags",
     "description": "An Eloquent tagging package for Laravel",
     "authors": [
         {
@@ -9,7 +9,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "BloomCU\\Tags\\": "src"
+            "MetriFi\\Tags\\": "src"
         }
     },
     "require": {

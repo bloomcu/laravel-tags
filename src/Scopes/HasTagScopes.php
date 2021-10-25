@@ -1,6 +1,6 @@
 <?php
 
-namespace BloomCU\Tags\Scopes;
+namespace MetriFi\Tags\Scopes;
 
 trait HasTagScopes
 {

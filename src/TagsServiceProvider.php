@@ -1,6 +1,6 @@
 <?php
 
-namespace BloomCU\Tags;
+namespace MetriFi\Tags;
 
 use Illuminate\Support\ServiceProvider;
 
