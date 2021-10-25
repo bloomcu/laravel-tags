@@ -33,7 +33,7 @@ trait HasTags
     // Remove all tags, then add specific tags
     public function retag(array $tags)
     {
-        $this->detachTags($this->tags);
+        $this->untagAll($this->tags);
 
         return $this->tag($tags);
     }
@@ -75,6 +75,14 @@ trait HasTags
     // Get tags from database, by their slug
     private function getTagModels(array $tags)
     {
-        return Tag::whereIn('slug', $tags)->get();
+        return Tag::whereIn('slug', $this->normaliseTagNames($tags))->get();
+    }
+
+    // Convert any tag names to slugs
+    private function normaliseTagNames(array $tags)
+    {
+        return array_map(function ($tag) {
+            return Str::slug($tag);
+        }, $tags);
     }
 }
