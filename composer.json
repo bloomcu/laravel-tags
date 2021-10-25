@@ -1,5 +1,5 @@
 {
-    "name": "metrifi/tags",
+    "name": "metrifi/laravel-tags",
     "description": "An Eloquent tagging package for Laravel",
     "authors": [
         {
