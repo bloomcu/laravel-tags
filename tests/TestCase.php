@@ -1,6 +1,6 @@
 <?php
 
-use MetriFi\Tags\TagsServiceProvider;
+use BloomCU\Tags\TagsServiceProvider;
 
 abstract class TestCase extends Orchestra\Testbench\TestCase
 {

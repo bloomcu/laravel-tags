@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Eloquent\Model;
-use MetriFi\Tags\Traits\HasTags;
+use BloomCU\Tags\Traits\HasTags;
 
 // Setup a stub model for testing
 class LessonStub extends Model

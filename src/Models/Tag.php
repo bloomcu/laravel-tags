@@ -1,6 +1,6 @@
 <?php
 
-namespace MetriFi\Tags\Models;
+namespace BloomCU\Tags\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

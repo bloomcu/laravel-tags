@@ -1,4 +1,4 @@
-## Tags Package
+## Laravel Tags
 
 Simple model tagging for Laravel. Includes a Tag model and migrations. Includes a trait for adding tagging capability to your model. Includes scopes for querying your models based on tags.
 
