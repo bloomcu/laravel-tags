@@ -22,12 +22,12 @@ Sample code coming soon...
 
 ## Tests
 
-If you've never run "phpunit" in the command line, then you should first add it as a bash alias, run:
-```
-$ alias phpunit='./vendor/bin/phpunit'
-```
-
 From within package, run test suite:
 ```
-phpunit
+$ phpunit
+```
+
+If you've never run "phpunit" install it, then restart terminal:
+```
+$ brew install phpunit
 ```
