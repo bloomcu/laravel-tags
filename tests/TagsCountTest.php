@@ -18,7 +18,7 @@ class TagsCountTest extends TestCase
     {
         // Create a tag
         $tag = \TagStub::create([
-            'name' => 'Red',
+            'title' => 'Red',
             'slug' => Str::slug('Red'),
             'count' => 0
         ]);
@@ -37,7 +37,7 @@ class TagsCountTest extends TestCase
     {
         // Create a tag
         $tag = \TagStub::create([
-            'name' => 'Red',
+            'title' => 'Red',
             'slug' => Str::slug('Red'),
             'count' => 100
         ]);
@@ -57,7 +57,7 @@ class TagsCountTest extends TestCase
     {
         // Create a tag
         $tag = \TagStub::create([
-            'name' => 'Red',
+            'title' => 'Red',
             'slug' => Str::slug('Red'),
             'count' => 0
         ]);
@@ -76,7 +76,7 @@ class TagsCountTest extends TestCase
     {
         // Create a tag
         $tag = \TagStub::create([
-            'name' => 'Red',
+            'title' => 'Red',
             'slug' => Str::slug('Red'),
             'count' => 0
         ]);

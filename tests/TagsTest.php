@@ -11,7 +11,7 @@ class TagsTest extends TestCase
         // Create tags to work with
         foreach (['Red', 'White', 'Blue', 'Purple', 'Ash Grey'] as $tag) {
             \TagStub::create([
-                'name' => $tag,
+                'title' => $tag,
                 'slug' => Str::slug($tag),
                 'count' => 0
             ]);
@@ -33,7 +33,7 @@ class TagsTest extends TestCase
 
         // Assert lesson has the right tags
         foreach (['Red', 'White'] as $tag) {
-            $this->assertContains($tag, $this->lesson->tags->pluck('name'));
+            $this->assertContains($tag, $this->lesson->tags->pluck('title'));
         }
     }
 
@@ -49,7 +49,7 @@ class TagsTest extends TestCase
         $this->assertCount(1, $this->lesson->tags);
 
         // Assert lesson has the right tag
-        $this->assertContains('Blue', $this->lesson->tags->pluck('name'));
+        $this->assertContains('Blue', $this->lesson->tags->pluck('title'));
     }
 
     public function test_can_untag_all_lesson_tags()
@@ -86,7 +86,7 @@ class TagsTest extends TestCase
 
         // Assert lesson has the right tags
         foreach (['Red', 'White', 'Blue', 'Ash Grey'] as $tag) {
-            $this->assertContains($tag, $this->lesson->tags->pluck('name'));
+            $this->assertContains($tag, $this->lesson->tags->pluck('title'));
         }
     }
 }

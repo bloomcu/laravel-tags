@@ -67,11 +67,11 @@ trait HasTags
     // Get tags from database, by their slug
     private function getTagModels(array $tags)
     {
-        return Tag::whereIn('slug', $this->normaliseTagNames($tags))->get();
+        return Tag::whereIn('slug', $this->normaliseTagTitles($tags))->get();
     }
 
-    // Convert any tag names to slugs
-    private function normaliseTagNames(array $tags)
+    // Convert any tag titles to slugs
+    private function normaliseTagTitles(array $tags)
     {
         return array_map(function ($tag) {
             return Str::slug($tag);
